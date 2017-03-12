@@ -146,17 +146,7 @@ public class ClassModel {
      */
     @Override
     public String toString() {
-        return "----------Class Details-------------\n"
-                + "ClassModel \n[Class name=" + name +
-                ", \nThis class extends =" + extend +
-                ", \nThis Class Implements interfaces = " + interfaces +
-                ", \nIs this class an Interface=" + isInterface +
-                ", \nIs this class an Abstract? =" + isAbstract +
-                ", \n\n---------Fields Details---------\nfieldList=" + fieldList +
-                ", \n\n---------Method Call Details---------\nmethodCall=" + methodCall +
-                ", \n\n-------Constructor Details------\nconstructorList=" + constructorList +
-                ", \n\n---------Method Details--------\nmethodList=" + methodList + "]\n" +
-                "--------------------------------------------------------------------\n";
+      
     }
 
 
