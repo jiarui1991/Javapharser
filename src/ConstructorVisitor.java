@@ -8,7 +8,7 @@ import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
 
 public class ConstructorVisitor extends VoidVisitorAdapter {
 
-    @Override
+     @Override
     public void visit(ConstructorDeclaration constructorDeclaration, Object obj) {
 
         ArrayList<ConstructorModel> constructorList = new ArrayList<ConstructorModel>();
@@ -34,5 +34,6 @@ public class ConstructorVisitor extends VoidVisitorAdapter {
         constructorList.add(tempConstructor);
         StaticClass.classList.get(StaticClass.index).getConstructorList().add(tempConstructor);
     }
+   
 
 }
