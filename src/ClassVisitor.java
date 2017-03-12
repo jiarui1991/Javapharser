@@ -7,7 +7,7 @@ import com.github.javaparser.ast.type.ClassOrInterfaceType;
 import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
 
 public class ClassVisitor extends VoidVisitorAdapter {
-
+    //override~~
     @Override
     public void visit(ClassOrInterfaceDeclaration classDeclaration, Object obj) {
 
