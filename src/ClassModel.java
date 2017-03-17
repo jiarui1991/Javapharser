@@ -20,48 +20,7 @@ public class ClassModel {
     private ArrayList<MethodModel> methodList;
     private HashMap<String, String> methodCall;
 
-    /**
-     * @return the name
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * @param name the name to set
-     */
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * @return the extend
-     */
-    public ArrayList<String> getExtend() {
-        return extend;
-    }
-
-    /**
-     * @param extend the extend to set
-     */
-    public void setExtend(ArrayList<String> extend) {
-        this.extend = extend;
-    }
-
-    /**
-     * @return the interfaces
-     */
-    public ArrayList<String> getInterfaces() {
-        return interfaces;
-    }
-
-    /**
-     * @param interfaces the interfaces to set
-     */
-    public void setInterfaces(ArrayList<String> interfaces) {
-        this.interfaces = interfaces;
-    }
-
+    
     /**
      * @return the isInterface
      */
@@ -102,6 +61,47 @@ public class ClassModel {
      */
     public void setFieldList(ArrayList<FieldModel> fieldList) {
         this.fieldList = fieldList;
+    }
+/**
+     * @return the name
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * @param name the name to set
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * @return the extend
+     */
+    public ArrayList<String> getExtend() {
+        return extend;
+    }
+
+    /**
+     * @param extend the extend to set
+     */
+    public void setExtend(ArrayList<String> extend) {
+        this.extend = extend;
+    }
+
+    /**
+     * @return the interfaces
+     */
+    public ArrayList<String> getInterfaces() {
+        return interfaces;
+    }
+
+    /**
+     * @param interfaces the interfaces to set
+     */
+    public void setInterfaces(ArrayList<String> interfaces) {
+        this.interfaces = interfaces;
     }
 
     /**
