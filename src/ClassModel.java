@@ -41,41 +41,6 @@ public class ClassModel {
     public boolean isAbstract() {
         return isAbstract;
     }
-
-    /**
-     * @param isAbstract the isAbstract to set
-     */
-    public void setAbstract(boolean isAbstract) {
-        this.isAbstract = isAbstract;
-    }
-
-    /**
-     * @return the fieldList
-     */
-    public ArrayList<FieldModel> getFieldList() {
-        return fieldList;
-    }
-
-    /**
-     * @param fieldList the fieldList to set
-     */
-    public void setFieldList(ArrayList<FieldModel> fieldList) {
-        this.fieldList = fieldList;
-    }
-/**
-     * @return the name
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * @param name the name to set
-     */
-    public void setName(String name) {
-        this.name = name;
-    }
-
     /**
      * @return the extend
      */
@@ -110,6 +75,41 @@ public class ClassModel {
     public ArrayList<ConstructorModel> getConstructorList() {
         return constructorList;
     }
+    /**
+     * @param isAbstract the isAbstract to set
+     */
+    public void setAbstract(boolean isAbstract) {
+        this.isAbstract = isAbstract;
+    }
+
+    /**
+     * @return the fieldList
+     */
+    public ArrayList<FieldModel> getFieldList() {
+        return fieldList;
+    }
+
+    /**
+     * @param fieldList the fieldList to set
+     */
+    public void setFieldList(ArrayList<FieldModel> fieldList) {
+        this.fieldList = fieldList;
+    }
+/**
+     * @return the name
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * @param name the name to set
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    
 
     /**
      * @param constructorList the constructorList to set
