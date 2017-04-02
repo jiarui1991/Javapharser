@@ -1,13 +1,11 @@
 
-
+import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.OutputStream;
-import java.util.ArrayList;
-import java.util.HashMap;
-
 import com.github.javaparser.JavaParser;
 import com.github.javaparser.ast.CompilationUnit;
 
@@ -48,10 +46,11 @@ public class MainParser {
         }
 
         for (; StaticClass.index < cUnit.length; StaticClass.index++) {
-            new ClassVisitor().visit(cUnit[StaticClass.index], null);
+           
+            new ConstructorVisitor().visit(cUnit[StaticClass.index], null);
+             new ClassVisitor().visit(cUnit[StaticClass.index], null);
             new FieldVisitor().visit(cUnit[StaticClass.index], null);
             new MethodVisitor().visit(cUnit[StaticClass.index], null);
-            new ConstructorVisitor().visit(cUnit[StaticClass.index], null);
             new MethodCallVisitor().visit(cUnit[StaticClass.index], null);
         }
 
@@ -77,11 +76,12 @@ public class MainParser {
         ClassModel tempClassModel = new ClassModel();
 
         // Temporary List Variables
-        ArrayList<FieldModel> tempFieldList = new ArrayList<FieldModel>();
-        ArrayList<ConstructorModel> tempConstructorList = new ArrayList<ConstructorModel>();
         ArrayList<MethodModel> tempMethodList = new ArrayList<MethodModel>();
         ArrayList<String> tempImplementsList = new ArrayList<String>();
         ArrayList<String> tempExtendsList = new ArrayList<String>();
+        ArrayList<FieldModel> tempFieldList = new ArrayList<FieldModel>();
+        ArrayList<ConstructorModel> tempConstructorList = new ArrayList<ConstructorModel>();
+        
 
         // Getting all Class Names in an ArrayList<String>
         ArrayList<String> classNamesList = new ArrayList<String>();
@@ -92,15 +92,15 @@ public class MainParser {
         Integer relationArray[][] = new Integer[classNamesList.size()][classNamesList.size()];
         Integer associationArray[][] = new Integer[classNamesList.size()][classNamesList.size()];
 
-        for (int indexRow = 0; indexRow < relationArray.length; indexRow++) {
-            for (int indexColumn = 0; indexColumn < relationArray[0].length; indexColumn++) {
-                relationArray[indexRow][indexColumn] = 0;
-            }
-        }
-
         for (int indexRow = 0; indexRow < associationArray.length; indexRow++) {
             for (int indexColumn = 0; indexColumn < associationArray[0].length; indexColumn++) {
                 associationArray[indexRow][indexColumn] = 0;
+            }
+        }
+        
+        for (int indexRow = 0; indexRow < relationArray.length; indexRow++) {
+            for (int indexColumn = 0; indexColumn < relationArray[0].length; indexColumn++) {
+                relationArray[indexRow][indexColumn] = 0;
             }
         }
 
@@ -367,20 +367,21 @@ public class MainParser {
         System.out.println(diagram);
 
         // Generating Output
-        OutputStream outputStream = null;
-
-        try {
-            outputStream = new FileOutputStream(args[1]);
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
 
         SourceStringReader stringReader = new SourceStringReader(diagram);
 
         try {
             String destination = stringReader.generateImage(outputStream);
         } catch (IOException e) {
+            e.printStackTrace();
+        }
+        
+         OutputStream outputStream = null;
+
+        try {
+            outputStream = new FileOutputStream(args[1]);
+
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }
