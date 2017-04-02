@@ -49,13 +49,13 @@ public class ClassVisitor extends VoidVisitorAdapter {
         tempClass.setName(name);
         tempClass.setExtend(extend);
         tempClass.setInterfaces(interfaces);
-        tempClass.setInterface(isInterface);
-        tempClass.setAbstract(false);
         tempClass.setFieldList(new ArrayList<FieldModel>());
         tempClass.setMethodList(new ArrayList<MethodModel>());
         tempClass.setConstructorList(new ArrayList<ConstructorModel>());
         tempClass.setMethodCall(new HashMap<String, String>());
-
+        tempClass.setInterface(isInterface);
+        tempClass.setAbstract(false);
+        
         StaticClass.classList.add(tempClass);
     }
 
