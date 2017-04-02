@@ -12,6 +12,21 @@ public class FieldModel {
     private String type;
     private String modifier;
 
+    
+    /**
+     * @param type the type to set
+     */
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    /**
+     * @return the modifier
+     */
+    public String getModifier() {
+        return modifier;
+    }
+    
     /**
      * @return the name
      */
@@ -31,20 +46,6 @@ public class FieldModel {
      */
     public String getType() {
         return type;
-    }
-
-    /**
-     * @param type the type to set
-     */
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    /**
-     * @return the modifier
-     */
-    public String getModifier() {
-        return modifier;
     }
 
     /**
