@@ -23,10 +23,10 @@ public class MainParser {
         ArrayList<MethodModel> methodList = new ArrayList<MethodModel>();
         ArrayList<ConstructorModel> constructorList = new ArrayList<ConstructorModel>();
 
-        // File file = new File("./Test Case 1");
+        File file = new File("./test5");
         File currentDirectory = null;
         try {
-            currentDirectory = new File(args[0]);
+            currentDirectory = file;
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println("Enter Correct Path");
