@@ -370,20 +370,20 @@ public class MainParser {
 
         SourceStringReader stringReader = new SourceStringReader(diagram);
 
-        try {
-            String destination = stringReader.generateImage(outputStream);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//         try {
+//             String destination = stringReader.generateImage(outputStream);
+//         } catch (IOException e) {
+//             e.printStackTrace();
+//         }
         
-         OutputStream outputStream = null;
+//          OutputStream outputStream = null;
 
-        try {
-            outputStream = new FileOutputStream(args[1]);
+//         try {
+//             outputStream = new FileOutputStream(args[1]);
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+//         } catch (FileNotFoundException e) {
+//             e.printStackTrace();
+//         }
     }
 
 }
