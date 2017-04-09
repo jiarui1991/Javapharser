@@ -1,16 +1,12 @@
 /**
- * 
+ * Testing FieldModel 
  */
 
-/**
- * @author Darshil
- *
- */
 public class FieldModel {
 
-    private String name;
-    private String type;
-    private String modifier;
+//     private String name;
+//     private String type;
+//     private String modifier;
 
     
     /**
