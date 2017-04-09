@@ -9,10 +9,6 @@ Class umlparser {
 	
 	private static CompilationUnit createCU() {
         CompilationUnit cu = new CompilationUnit();
-        // set the package
-        
-        
-        
         
         cu.setPackageDeclaration(new PackageDeclaration(Name.parse("java.parser.test")));
 
